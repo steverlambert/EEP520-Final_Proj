@@ -1,0 +1,16 @@
+{
+    "name": "PlayerOneOmni",
+    "type": "dynamic",
+    "description": "Moving shooting robot with omni control",
+    "shape": "omni",
+    "radius": 20,
+    "friction": {
+      "collision": 1,
+      "linear": 40,
+      "rotational": 300
+    },
+    "sensors": [
+    ],
+    "mass": 1,    
+    "controller": "lib/player_one_omni.so"
+}

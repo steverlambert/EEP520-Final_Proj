@@ -1,0 +1,16 @@
+{
+  "name": "Flag",
+  "type": "dynamic",
+  "description": "A flag/ball",
+  "shape": "omni",
+  "radius": 9,
+
+  "friction": {
+      "collision": 2,
+      "linear": 20,
+      "rotational": 600
+  },
+  "sensors": [],
+  "mass": 0.5,
+  "controller": "lib/flag.so"
+}

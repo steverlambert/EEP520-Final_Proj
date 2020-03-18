@@ -1,0 +1,131 @@
+{
+
+    "name": "My Enviro Project",
+    "ip": "0.0.0.0",
+    "port": 8765,
+    "buttons": [ {
+            "name": "1",
+            "label": "One Player: Fighter A",
+            "style": { "background": "white", "border-color": "black" }
+        }, 
+        {
+            "name": "1_1",
+            "label": "One Player: Fighter B",
+            "style": { "background": "white", "border-color": "black" }
+        }, 
+        {
+            "name": "2",
+            "label": "Two Players",
+            "style": { "background": "white", "border-color": "black" }
+        }
+    ],
+
+    "agents": [    
+        {
+            "definition": "defs/game_controller.json",
+            "style": { "fill": "lightblue", "stroke": "black" },
+            "position": {
+                "x": 0, 
+                "y": -200, 
+                "theta": 0
+            }
+        }
+        
+    ],
+
+    "references": [
+        {
+            "definition": "defs/player_one_omni.json",
+            "style": { "fill": "black", "stroke": "black" },
+            "position": {"x": -400, "y": 0, "theta": 0 }
+        },
+        {
+            "definition": "defs/player_one_rect.json",
+            "style": { "fill": "lightgreen", "stroke": "black" },
+            "position": {
+                "x": 1000, 
+                "y": 900, 
+                "theta": 0
+            }
+        },
+        {
+            "definition": "defs/player_two_rect.json",
+            "style": { "fill": "blue", "stroke": "black" },
+            "position": {
+                "x": 0, 
+                "y": 0, 
+                "theta": 3.14
+            }
+        },
+        {
+            "definition": "defs/goal.json",
+            "style": { "fill": "red", "stroke": "#888", "stroke-width": "5px", "stroke-opacity": "0.25" },
+            "position": {"x": 600, "y": 0, "theta": 3.14 }
+        },
+        {
+            "definition": "defs/goal2.json",
+            "style": { "fill": "red", "stroke": "#888", "stroke-width": "5px", "stroke-opacity": "0.25" },
+            "position": {"x": -600, "y": 0, "theta": 0 }
+        },
+        {
+            "definition": "defs/follower.json",
+            "style": { "fill": "black", "stroke": "black" },
+            "position": {"x": -1000, "y": 1000, "theta": 0 }
+        },
+        {
+            "definition": "defs/flag.json",
+            "style": { "fill": "green", "stroke": "black" },
+            "position": {
+                "x": 0, 
+                "y": 0, 
+                "theta": 0
+            }
+        },
+        {
+            "definition": "defs/bullet.json",
+            "style": { "fill": "green", "stroke": "#888", "stroke-width": "5px", "stroke-opacity": "0.25" },
+            "position": {"x": -1000, "y": 0, "theta": 3.14 }
+        }
+    ],
+
+    "statics": [
+        {
+            "style": { "fill": "gray", "stroke": "none" },
+            "shape": [
+                { "x": -700, "y": -400 },
+                { "x": -700,  "y": 400 },
+                { "x": -680,  "y": 400 },
+                { "x": -680, "y": -400 }
+            ]
+        },
+        {
+            "style": { "fill": "gray", "stroke": "none" },
+            "shape": [
+                { "x": 700, "y": -400 },
+                { "x": 700,  "y": 400 },
+                { "x": 680,  "y": 400 },
+                { "x": 680, "y": -400 }
+            ]
+        },
+        {
+            "style": { "fill": "gray", "stroke": "none" },
+            "shape": [
+                { "x": -700, "y": 400 },
+                { "x": 700,  "y": 400 },
+                { "x": 700,  "y": 380 },
+                { "x": -700, "y": 380 }
+            ]
+        },
+        {
+            "style": { "fill": "gray", "stroke": "none" },
+            "shape": [
+                { "x": -700, "y": -400 },
+                { "x": 700,  "y": -400 },
+                { "x": 700,  "y": -380 },
+                { "x": -700, "y": -380 }
+            ]
+        }
+
+    ]
+
+}

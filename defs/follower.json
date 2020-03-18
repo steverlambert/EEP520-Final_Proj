@@ -1,0 +1,17 @@
+{
+  "name": "Follower",
+  "type": "dynamic",
+  "description": "Robot that tries to get into the goal",
+  "shape": "omni",
+  "radius": 10,
+
+  "friction": {
+      "collision": 4,
+      "linear": 100,
+      "rotational": 800
+  },
+  "sensors": [       
+  ],
+  "mass": 60,
+  "controller": "lib/follower.so"
+}
