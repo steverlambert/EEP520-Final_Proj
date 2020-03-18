@@ -32,6 +32,10 @@ Then, navigating to http://localhost in any web browser will bring up the projec
 
 # Running
 
+
+![GitHub Logo](two-player.png)
+Format: ![Alt Text](url
+
 README has an overview of what the goal of the project is
 10	README has a description of key challenges and how they were addressed
 10	README describes how to install and run the code (assuming the user has docker installed)
