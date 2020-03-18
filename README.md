@@ -11,6 +11,9 @@ The goal of this project was to create a game that could be played with one or t
 - agent constraints, such as attaching
 
 # Challenges
+The most difficult and time-consuming aspect of creating this game was the dynamic addition and removal of agents. I encountered the errors "could not find agent id", "bad function call", and "can't add to process while updating" countless times while trying to add or remove agents. At first, I was handling much of the control of the system with the "player one" robot class. Once invisible agents were an option, I moved the control to an overall invisible controller, which made the code much cleaner and easier to debug. I also realized that you cannot add an agent inside a collision loop (this gives the "updating" error). Emitting events and setting flags became the best method. For the flag control in the two-player game, I left the control in the robot classes because the flag needed to respawn directly behind the robots and the flag class is unaware of the robots' positions. The teleport method would be perfect for this, but - because the flag is attached to the robot - it will remain attached after a teleport, which throws everything into chaos. A "detach" method would be useful here. 
+
+Somewhat related to the above, I spent several hours trying to add a "reset" command so the game could be played multiple times and with different modes without the need to restart enviro. I was ultimately unsuccessful. By teleporting agents back to their starting position, resetting works if the user plays the same mode over and over, but once a new mode is selected the process breaks. My other method was to emit a "reset" event when the reset button is clicked. This produced two odd behaviors. First, it would reset and start a new game successfully once but would crash with a “could not find agent id” on the second reset. Second, when I reset, emitted the event, and deleted the relevant agents, a “ghost” agent was leftover. An invisible version of the robot that was deleted remained and would eventually crash the system. I only know this because it fired white bullets that were outlined in black when I pressed the fire key. So, the first addition to my game when I have more time is a reset button.
 
 # Installation
 Clone the EEP520-Final_Proj repository and make it your working directory.
@@ -57,8 +60,3 @@ Notes:
 # Sources
 - https://github.com/klavinslab/enviro
 
-README has an overview of what the goal of the project is
-10	README has a description of key challenges and how they were addressed
-10	README describes how to install and run the code (assuming the user has docker installed)
-10	README describes how to run and/or use the project
-5	README acknowedges all sources of information or code used
