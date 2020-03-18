@@ -13,9 +13,24 @@ The goal of this project was to create a game that could be played with one or t
 Challenges:
 
 # Installation
-In a terminal, run 
+Clone the EEP520-Final_Proj repository and make it your working directory.
+Then, run 
 
-$docker run -p80:80 -p8765:8765 -v /c/Users/steve/520/code:/source -it klavins/enviro:v1.5 bash$
+```bash
+docker run -p80:80 -p8765:8765 -v $PWD:/source -it klavins/enviro:v1.5 bash
+```
+From there, compile with
+```bash
+make
+```
+Start the enviro server with 
+```bash
+esm start
+enviro
+```
+Then, navigating to http://localhost in any web browser will bring up the project window.
+
+# Running
 
 README has an overview of what the goal of the project is
 10	README has a description of key challenges and how they were addressed
