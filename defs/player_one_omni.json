@@ -3,7 +3,7 @@
     "type": "dynamic",
     "description": "Moving shooting robot with omni control",
     "shape": "omni",
-    "radius": 20,
+    "radius": 12,
     "friction": {
       "collision": 1,
       "linear": 40,
