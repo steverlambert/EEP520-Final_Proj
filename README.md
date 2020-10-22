@@ -1,4 +1,4 @@
-# EEP520-Final_Proj
+# Robot Soccer
 A 1- or 2- player robot soccer game (with shooting).
 
 The goal of this project was to create a game that could be played with one or two players - on a single computer - that used several of the latest enviro features, including: 
