@@ -1,5 +1,5 @@
 # Robot Soccer
-A 1- or 2- player robot soccer game (with shooting).
+A 1- or 2- player robot soccer game (with shooting). 
 
 The goal of this project was to create a game that could be played with one or two players - on a single computer - that used several of the latest enviro features, including: 
 - omnidirectional agents
@@ -16,7 +16,7 @@ The most difficult and time-consuming aspect of creating this game was the dynam
 Somewhat related to the above, I spent several hours trying to add a "reset" command so the game could be played multiple times and with different modes without the need to restart enviro. I was ultimately unsuccessful. By teleporting agents back to their starting position, resetting works if the user plays the same mode over and over, but once a new mode is selected the process breaks. My other method was to emit a "reset" event when the reset button is clicked. This produced two odd behaviors. First, it would reset and start a new game successfully once but would crash with a “could not find agent id” on the second reset. Second, when I reset, emitted the event, and deleted the relevant agents, a “ghost” agent was leftover. An invisible version of the robot that was deleted remained and would eventually crash the system. I only know this because it fired white bullets that were outlined in black when I pressed the fire key. So, the first addition to my game when I have more time is a reset button.
 
 # Installation
-Clone the EEP520-Final_Proj repository and make it your working directory.
+Clone the RobotSoccer repository and make it your working directory.
 Then, run 
 
 ```bash
